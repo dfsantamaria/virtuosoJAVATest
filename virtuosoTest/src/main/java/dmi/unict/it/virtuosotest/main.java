@@ -30,6 +30,7 @@ public class main
     public static void main ( String args[])
       {
         /* Access graph */
+        // see http://docs.openlinksw.com/virtuoso/virtdsnsetup/ for ODBC configuration
        	VirtGraph set = new VirtGraph ("jdbc:virtuoso://localhost:1111", "dba", "dba");
         /* Query the graph */
         Query sparql = QueryFactory.create("SELECT * WHERE { GRAPH ?graph { ?s ?p ?o } } limit 100");        
